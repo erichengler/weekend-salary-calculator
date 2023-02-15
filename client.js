@@ -38,8 +38,18 @@ function submitForm( event ) {
     `;
     // Adding new employee annual salary / 12 to the total monthly cost
     totalMonthly += (salaryVal / 12);
+    // Equation to make total monthly round to first 2 decimal places
+    let fixedMonthly = Math.round(totalMonthly*100)/100;
     let totalMonthlyAppend = document.querySelector("#total-monthly");
-    totalMonthlyAppend.innerHTML = totalMonthly;
+    
+    // Adding red background if totalMonthly is greater than 20000
+    if ( fixedMonthly > 20000 ) {
+        totalMonthlyAppend.innerHTML = `
+            <span style='background-color:#d83636'>${fixedMonthly}</span>
+        `;
+    } else {
+        totalMonthlyAppend.innerHTML = fixedMonthly;
+    }
 
     // Resetting input fields
     let form = document.querySelector(".salary-form");
@@ -54,8 +64,18 @@ function deleter( event ) {
     // Removing deleted employee's annual salary / 12 from the total monthly cost
     let salaryVal = Number(element.children[4].innerHTML);
     totalMonthly -= (salaryVal / 12);
+
+    let fixedMonthly = Math.round(totalMonthly*100)/100;
     let totalMonthlyAppend = document.querySelector("#total-monthly");
-    totalMonthlyAppend.innerHTML = totalMonthly;
+
+    // Adding red background if totalMonthly is greater than 20000
+    if ( fixedMonthly > 20000 ) {
+        totalMonthlyAppend.innerHTML = `
+            <span style='background-color:#d83636'>${fixedMonthly}</span>
+        `;
+    } else {
+        totalMonthlyAppend.innerHTML = fixedMonthly;
+    }
 
     // Removing deleted employee from array
     for ( let i=0; i<employeeInfoArray.length; i++ ) {

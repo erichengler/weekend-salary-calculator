@@ -8,7 +8,7 @@ body {
 header {
     font-size: xx-large;
     text-align: center;
-    background-color: #706475;
+    background-color: #584e5c;
     border: none;
     color: white;
     padding: 12px 32px;
@@ -19,6 +19,7 @@ h2 {
 }
 
 h3 {
+    font-size: x-large;
     text-align: right;
     padding: 20px;
 }
@@ -51,6 +52,7 @@ h3 {
   }
 
 input[type=text] {
+    font-size: large;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -58,6 +60,7 @@ input[type=text] {
   }
 
 input[type=number] {
+    font-size: large;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
