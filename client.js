@@ -1,6 +1,7 @@
 console.log( 'hello world' );
 
 let employeeInfoArray = [];
+let totalMonthly = 0;
 
 // Function to add submitted information to the array
 function submitForm( event ) {
@@ -10,7 +11,7 @@ function submitForm( event ) {
     let lastNameVal = document.querySelector( '#last-name-input' ).value
     let idNumberVal = Number(document.querySelector( '#id-number-input' ).value)
     let jobTitleVal = document.querySelector( '#job-title-input' ).value
-    let salaryVal = Number(document.querySelector( '#salary-input ').value)
+    let salaryVal = Number(document.querySelector( '#salary-input').value)
 
     let newEmployee = {
         FirstName: firstNameVal,
@@ -23,7 +24,6 @@ function submitForm( event ) {
     employeeInfoArray.push( newEmployee );
     console.log( employeeInfoArray );
   
-
     // Appending employee information values to the table
     let appendTable = document.querySelector( '#appendMe' );
     appendTable.innerHTML += `
@@ -32,16 +32,30 @@ function submitForm( event ) {
             <td>${lastNameVal}</td>
             <td>${idNumberVal}</td>
             <td>${jobTitleVal}</td>
-            <td>${salaryVal}</td>
+            <td>$${salaryVal}</td>
             <td><button id="delete-button" onClick="deleter(event)">Delete</button>
         </tr>    
     `;
+    // Adding new employee annual salary / 12 to the total monthly cost
+    totalMonthly += (salaryVal / 12);
+    let totalMonthlyAppend = document.querySelector("#total-monthly");
+    totalMonthlyAppend.innerHTML = totalMonthly;
+
+    // Resetting input fields
+    let form = document.querySelector(".salary-form");
+    form.reset();
 }
 
 function deleter( event ) {
     // Removing employee row from table
     let element = event.target.parentElement.parentElement
     element.remove();
+
+    // Removing deleted employee's annual salary / 12 from the total monthly cost
+    let salaryVal = Number(element.children[4].innerHTML);
+    totalMonthly -= (salaryVal / 12);
+    let totalMonthlyAppend = document.querySelector("#total-monthly");
+    totalMonthlyAppend.innerHTML = totalMonthly;
 
     // Removing deleted employee from array
     for ( let i=0; i<employeeInfoArray.length; i++ ) {
@@ -52,7 +66,3 @@ function deleter( event ) {
         } 
     }  
 }
-
-
-
-
