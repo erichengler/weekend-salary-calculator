@@ -22,6 +22,7 @@ function submitForm( event ) {
 
     employeeInfoArray.push( newEmployee );
     console.log( employeeInfoArray );
+  
 
     // Appending employee information values to the table
     let appendTable = document.querySelector( '#appendMe' );
@@ -45,13 +46,13 @@ function deleter( event ) {
     // Removing deleted employee from array
     for ( let i=0; i<employeeInfoArray.length; i++ ) {
         if ( employeeInfoArray[i].IDNum === Number(element.children[2].innerHTML) ) {
-            employeeInfoArray.splice( i )
+            employeeInfoArray.splice( i, 1 );
+            console.log( employeeInfoArray );
+            return;
         } 
-    }  console.log( employeeInfoArray );
+    }  
 }
 
-// QUESTION FOR TOMORROW : THE ABOVE FUNCTION ONLY WORKS IF ITS NOT THE FIRST EMPLOYEE
-// IM DELETING. I KNOW THIS HAS TO DO WITH element.children BUT CANT FIGURE IT OUT.
 
 
 
