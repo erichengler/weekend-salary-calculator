@@ -8,7 +8,7 @@ function submitForm( event ) {
 
     let firstNameVal = document.querySelector( '#first-name-input' ).value
     let lastNameVal = document.querySelector( '#last-name-input' ).value
-    let idNumberVal = document.querySelector( '#id-number-value' ).value
+    let idNumberVal = document.querySelector( '#id-number-input' ).value
     let jobTitleVal = document.querySelector( '#job-title-input' ).value
     let salaryVal = document.querySelector( '#salary-input ').value
 
