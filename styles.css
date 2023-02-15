@@ -1,0 +1,65 @@
+html,
+body {
+    margin: 0;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    font-size: xx-large;
+    text-align: center;
+    background-color: #706475;
+    border: none;
+    color: white;
+    padding: 12px 32px;
+}
+
+h2 {
+    padding: 5px;
+}
+
+h3 {
+    text-align: right;
+    padding: 20px;
+}
+
+.salary-form {
+    padding: 20px;
+}
+
+#salaryData {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #salaryData td, #salaryData th {
+    border: 2px solid #1e1b1f;
+    padding: 8px;
+  }
+  
+  #salaryData tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #salaryData tr:hover {background-color: #ddd;}
+  
+  #salaryData th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #706475;
+    color: white;
+  }
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }

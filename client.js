@@ -32,7 +32,7 @@ function submitForm( event ) {
             <td>${lastNameVal}</td>
             <td>${idNumberVal}</td>
             <td>${jobTitleVal}</td>
-            <td>$${salaryVal}</td>
+            <td>${salaryVal}</td>
             <td><button id="delete-button" onClick="deleter(event)">Delete</button>
         </tr>    
     `;
