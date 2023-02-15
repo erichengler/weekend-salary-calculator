@@ -15,7 +15,7 @@ function submitForm( event ) {
     let newEmployee = {
         FirstName: firstNameVal,
         LastName: lastNameVal,
-        ID: idNumberVal,
+        IDNum: idNumberVal,
         JobTitle: jobTitleVal,
         Salary: salaryVal
     }
@@ -37,8 +37,21 @@ function submitForm( event ) {
     `;
 }
 
-// Removing employee row from table
 function deleter( event ) {
-    event.target.parentElement.parentElement.remove();
+    // Removing employee row from table
+    let element = event.target.parentElement.parentElement
+    element.remove();
 
+    // Removing deleted employee from array
+    for ( let i=0; i<employeeInfoArray.length; i++ ) {
+        if ( employeeInfoArray[i].IDNum === Number(element.children[2].innerHTML) ) {
+            employeeInfoArray.splice( i )
+        } 
+    }  console.log( employeeInfoArray );
 }
+
+// QUESTION FOR TOMORROW : THE ABOVE FUNCTION ONLY WORKS IF ITS NOT THE FIRST EMPLOYEE
+// IM DELETING. I KNOW THIS HAS TO DO WITH element.children BUT CANT FIGURE IT OUT.
+
+
+
