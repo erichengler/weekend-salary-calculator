@@ -3,7 +3,7 @@ console.log( 'hello world' );
 let employeeInfoArray = [];
 let totalMonthly = 0;
 
-// Function to add submitted information to the array
+// Function to add submitted information to the array as an object
 function submitForm( event ) {
     event.preventDefault();
 
