@@ -10,7 +10,7 @@ When the delete button is clicked, the submission is removed from the table and 
 
 ## Screen Shot
 
-![Preview](.finished-preview.png)
+![Preview](finished-preview.png)
 
 ### Usage
 
