@@ -15,3 +15,7 @@ When the delete button is clicked, the submission is removed from the table and 
 ### Usage
 
 This was before we learned how to set up a server using Node.js. To view the app, open the index.html file in your browser.
+
+## Acknowledgement
+
+Thanks to Chris Black and Prime Digital Academy for providing me with the knowledge I needed to make this!
