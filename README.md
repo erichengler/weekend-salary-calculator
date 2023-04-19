@@ -12,7 +12,7 @@ When the delete button is clicked, the submission is removed from the table and 
 
 ![Preview](finished-preview.png)
 
-## Usage
+## Installation
 
 This was before we learned how to set up a server using Node.js. To view the app, open the index.html file in your browser.
 
